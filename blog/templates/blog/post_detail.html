@@ -1,0 +1,8 @@
+{% if post %}
+  <h1>{{post.title}}</h1>
+  <h4>By: {{post.author}}</h4>
+  <h5>Date: {{post.created_date}} </h5>
+  <p>{{post.content}}</p>
+{% else %}
+  <h1>There's nothing here? Perhaps there was a mistake?</h1>
+{% endif %}
