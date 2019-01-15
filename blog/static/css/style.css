@@ -1,0 +1,12 @@
+#recent_posts li{
+  text-decoration: none;
+  list-style: none;
+  background-color: #dbdbdb;
+  border-left-style: solid;
+  font-size: 1.6em;
+
+}
+
+.bigbrand{
+  font-size: 1.5em;
+}

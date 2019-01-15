@@ -1,10 +1,14 @@
 from django.urls import path
 
+from . import views
+
 
 from . import views
 
+app_name = 'blog'
+
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('topic/<int:topic_id>/', views.topics, name='topic'),
-    path('post/<int:post_id>/', views.post_detail, name='post'),
+    path('', views.IndexView.as_view(), name='index'),
+    path('topic/<int:pk>/', views.topics, name='topic'),
+    path('post/<int:pk>/', views.PostDetailView.as_view(), name='post'),
 ]

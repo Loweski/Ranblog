@@ -1,9 +1,16 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h3>Recent Posts:</h3>
 {% if latest_posts %}
-  <ul>
+<div class="container">
+  <ul id='recent_posts'>
     {% for post in latest_posts %}
-      <li><a href="/post/{{post.id}}/">{{post.title}}</a></li>
+      <li><a href="{% url 'blog:post' post.id %}">{{post.title}}</a> Date: {{post.created_date.date}}</li>
     {% endfor %}
   </ul>
+</div>
+
 {% else %}
   <p>No posts available.</p>
 {% endif %}
+{% endblock %}
